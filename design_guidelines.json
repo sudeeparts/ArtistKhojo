@@ -1,0 +1,166 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 4 (Editorial/Premium) fused with vibrant logo accents",
+  "typography": {
+    "headings": "Clash Display",
+    "body": "Satoshi",
+    "fallback_fonts": "sans-serif",
+    "weights": {
+      "headings": [500, 600, 700],
+      "body": [400, 500, 700]
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl tracking-tight",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm text-secondary tracking-wide uppercase",
+      "tiny": "text-xs text-secondary"
+    }
+  },
+  "colors": {
+    "backgrounds": {
+      "base": "#FDFBF7",
+      "surface": "#FFFFFF",
+      "surface_hover": "#F4F4F5",
+      "surface_elevated": "#FFFFFF"
+    },
+    "text": {
+      "primary": "#18181B",
+      "secondary": "#52525B",
+      "tertiary": "#A1A1AA",
+      "on_dark": "#FFFFFF"
+    },
+    "brand": {
+      "gradient": "linear-gradient(135deg, #9D4CDD 0%, #3B82F6 30%, #F97316 70%, #EC4899 100%)",
+      "gradient_class": "bg-gradient-to-r from-[#9D4CDD] via-[#3B82F6] to-[#EC4899]",
+      "purple": "#9D4CDD",
+      "blue": "#3B82F6",
+      "orange": "#F97316",
+      "magenta": "#EC4899"
+    },
+    "state": {
+      "success": "#10B981",
+      "error": "#EF4444",
+      "warning": "#F59E0B",
+      "border": "#E4E4E7",
+      "divider": "#F4F4F5"
+    }
+  },
+  "spacing": {
+    "section_y": "py-16 sm:py-24 lg:py-32",
+    "container_x": "px-6 sm:px-8 lg:px-12",
+    "grid_gap": "gap-6 lg:gap-8",
+    "item_gap": "gap-3 sm:gap-4"
+  },
+  "layout_patterns": {
+    "container": "max-w-7xl mx-auto",
+    "hero": "grid grid-cols-1 lg:grid-cols-12 gap-12 items-center",
+    "category_bento": "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4",
+    "portfolio_grid": "grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-4 aspect-square",
+    "artist_listing": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+  },
+  "ui_components": {
+    "buttons": {
+      "primary": "rounded-full bg-zinc-900 text-white hover:bg-zinc-800 transition-colors px-6 py-3 font-medium flex items-center justify-center gap-2",
+      "brand_gradient": "rounded-full bg-gradient-to-r from-[#9D4CDD] via-[#3B82F6] to-[#EC4899] text-white hover:opacity-90 transition-opacity px-6 py-3 font-medium",
+      "secondary": "rounded-full border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50 transition-colors px-6 py-3 font-medium",
+      "ghost": "rounded-full text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 transition-colors px-4 py-2"
+    },
+    "cards": {
+      "default": "bg-white rounded-2xl border border-zinc-200 p-6 shadow-sm hover:shadow-md transition-shadow",
+      "portfolio": "group relative overflow-hidden rounded-2xl bg-zinc-100",
+      "avatar_story": "rounded-full p-1 bg-gradient-to-tr from-[#9D4CDD] via-[#3B82F6] to-[#EC4899]"
+    },
+    "inputs": {
+      "text": "rounded-xl border border-zinc-200 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all",
+      "search": "rounded-full border-zinc-200 bg-white/80 backdrop-blur-sm px-6 py-4 shadow-sm focus:ring-2 focus:ring-[#9D4CDD]/20",
+      "filter_pill": "rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-sm font-medium hover:border-zinc-300 transition-colors cursor-pointer"
+    },
+    "badges": {
+      "blue_tick": "inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#3B82F6] to-[#9D4CDD] text-white p-0.5",
+      "category": "px-3 py-1 text-xs font-medium rounded-full bg-zinc-100 text-zinc-700"
+    }
+  },
+  "motion": {
+    "hover_lift": "hover:-translate-y-1 transition-transform duration-300 ease-out",
+    "fade_in": "animate-in fade-in duration-500",
+    "slide_up": "animate-in slide-in-from-bottom-4 duration-500"
+  },
+  "pages": {
+    "landing": {
+      "hero": "Minimalist cream background with the vibrant peacock logo gradient subtly glowing. Bold Clash Display heading 'Every Skilled People Ka Single Platform'. Large search bar with category pills below. 'Get Started' CTA using the brand gradient button.",
+      "featured_artists": "Horizontal scroll of 'story-style' circular avatars (Instagram inspired) with the gradient border.",
+      "categories": "Bento grid of categories with soft off-white cards, dark text, and subtle hover lifts."
+    },
+    "artist_listing": {
+      "layout": "Sidebar for filters (Category, Location, Rating, Price) on desktop. Grid of artist cards on right.",
+      "artist_card": "Instagram-style card. Top: Avatar, Name, Blue Tick, City. Middle: 4-item portfolio grid. Bottom: Rating stars, 'View Profile' button."
+    },
+    "artist_profile": {
+      "layout": "Centered maximum 3xl container. Top section: Large Avatar, Name, Blue Tick, Bio, Rating, Follower count. CTA: 'Message via Platform' (brand gradient).",
+      "portfolio": "Masonry or tight grid of images/videos. No contact info visible.",
+      "reviews": "Clean list of customer reviews with star ratings."
+    },
+    "customer_dashboard": {
+      "layout": "Sidebar navigation (Profile, Wallet, My Requirements, Bookings). Main content area with white cards on the cream background.",
+      "wallet": "Card showing balance, 'Add Money' button, transaction history.",
+      "create_requirement": "Clean form to post a job (Title, Category, Budget, Description)."
+    },
+    "artist_dashboard": {
+      "layout": "Sidebar navigation (Profile Editor, Opportunities, My Bookings, Earnings).",
+      "profile_editor": "Form to update bio, upload exactly 4 portfolio items, connect IG account."
+    },
+    "login": {
+      "layout": "Centered card on a subtle gradient background. Mobile-first view. 'Enter Mobile Number', 'Send OTP', 'Verify' flow. Role selection toggle (Artist vs Customer) after OTP."
+    }
+  },
+  "media": {
+    "images": {
+      "hero_backgrounds": [
+        {
+          "url": "https://static.prod-images.emergentagent.com/jobs/ca65f773-3c93-4072-8d20-dcc5be5b8c4c/images/cb7c5a3f2ad9e311d4307437bcb68c926e291e9ea4a457092caafa0e59989f1c.png",
+          "description": "Premium brand gradient abstract background for hero section accents"
+        },
+        {
+          "url": "https://static.prod-images.emergentagent.com/jobs/ca65f773-3c93-4072-8d20-dcc5be5b8c4c/images/0d3f6cd2b0b950589a46fc68ac9e5f3860457bc2c42c5f36f07e625e121db06d.png",
+          "description": "Cream textured background for premium subtle sections"
+        }
+      ],
+      "categories_and_portfolios": [
+        {
+          "url": "https://images.unsplash.com/photo-1661899566773-f65dc6054d6d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBkYW5jZXIlMjBwZXJmb3JtYW5jZXxlbnwwfHx8fDE3Nzc2MjQ4ODR8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Indian dancer performance (Dance & Music / Performing Arts)"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1720217260759-cafa6de4e46b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxhcnRpc3QlMjBwYWludGluZyUyMGNhbnZhc3xlbnwwfHx8fDE3Nzc2MjQ4ODN8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Artist painting canvas (Visual Artist / Painter)"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1648662199460-34b7597ba771?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxzdHVkaW8lMjBwaG90b2dyYXBoZXIlMjBjYW1lcmF8ZW58MHx8fHwxNzc3NjI0ODgzfDA&ixlib=rb-4.1.0&q=85",
+          "description": "Studio photographer camera (Photography & Film)"
+        }
+      ],
+      "artist_avatars": [
+        {
+          "url": "https://images.unsplash.com/photo-1749804946030-f08eb721a3d8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBwb3J0cmFpdCUyMGNyZWF0aXZlfGVufDB8fHx8MTc3NzYyNDg4M3ww&ixlib=rb-4.1.0&q=85",
+          "description": "Creative Indian portrait 1"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1749804946005-e0db1140461b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBwb3J0cmFpdCUyMGNyZWF0aXZlfGVufDB8fHx8MTc3NzYyNDg4M3ww&ixlib=rb-4.1.0&q=85",
+          "description": "Creative Indian portrait 2"
+        }
+      ]
+    }
+  },
+  "instructions_to_main_agent": [
+    "Ensure all interactive elements have data-testid attributes.",
+    "Use standard HTML/Tailwind for the marketing landing page (no Shadcn rigid layouts).",
+    "Use Shadcn components for dashboards, forms, and settings but styled to match the premium cream/white theme without harsh shadows.",
+    "Ensure the Blue Tick is visibly prominent on verified artist profiles.",
+    "Implement the EXACT 4-item Instagram-style grid for the artist portfolios.",
+    "Do not display any phone numbers or emails on the public artist profile; use the 'Message via Platform' flow.",
+    "Inject the logo's peacock color palette strictly as accents (buttons, active states, badges), keeping the primary UI minimal and neutral."
+  ]
+}

@@ -1,0 +1,191 @@
+/* ArtistKhojo — premium editorial theme.
+   Display: Gambarino (serif-display hybrid with personality)
+   Body: Supreme (geometric grotesk with subtle quirk)
+   Both via Fontshare CDN. */
+
+@import url("https://api.fontshare.com/v2/css?f[]=gambarino@400&f[]=supreme@300,400,500,700&f[]=satoshi@500,700&display=swap");
+
+:root {
+  --ak-bg: #FDFBF7;
+  --ak-surface: #FFFFFF;
+  --ak-ink: #18181B;
+  --ak-ink-2: #52525B;
+  --ak-border: #E4E4E7;
+  --ak-purple: #9D4CDD;
+  --ak-blue: #3B82F6;
+  --ak-orange: #F97316;
+  --ak-magenta: #EC4899;
+}
+
+html, body, #root {
+  background: var(--ak-bg);
+  color: var(--ak-ink);
+}
+
+body {
+  font-family: "Supreme", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-feature-settings: "ss01", "ss02";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.005em;
+}
+
+.font-display {
+  font-family: "Gambarino", "Supreme", serif;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+}
+
+.font-display-italic {
+  font-family: "Gambarino", "Supreme", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Hide scrollbar for category pill strip */
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Subtle selection styling with brand tint */
+::selection {
+  background: rgba(236, 72, 153, 0.18);
+  color: var(--ak-ink);
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--ak-ink);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes ak-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ak-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes ak-scale-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes ak-float {
+  0%,100% { transform: translate3d(0,0,0) scale(1); }
+  50%     { transform: translate3d(0,-18px,0) scale(1.04); }
+}
+
+@keyframes ak-float-slow {
+  0%,100% { transform: translate3d(0,0,0) scale(1); }
+  50%     { transform: translate3d(0,-26px,0) scale(1.06); }
+}
+
+@keyframes ak-drift {
+  0%   { transform: translate3d(0, 0, 0); }
+  33%  { transform: translate3d(40px, -30px, 0); }
+  66%  { transform: translate3d(-30px, 20px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes ak-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes ak-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes ak-gradient-shift {
+  0%,100% { background-position: 0% 50%; }
+  50%     { background-position: 100% 50%; }
+}
+
+@keyframes ak-caret-blink {
+  0%,49% { opacity: 1; }
+  50%,100% { opacity: 0; }
+}
+
+/* Utility classes */
+.ak-fade-up      { opacity: 0; animation: ak-fade-up 0.9s cubic-bezier(.2,.7,.2,1) forwards; }
+.ak-fade-in      { opacity: 0; animation: ak-fade-in 0.9s ease forwards; }
+.ak-scale-in     { opacity: 0; animation: ak-scale-in 0.7s cubic-bezier(.2,.7,.2,1) forwards; }
+.ak-float        { animation: ak-float 7s ease-in-out infinite; }
+.ak-float-slow   { animation: ak-float-slow 11s ease-in-out infinite; }
+.ak-drift        { animation: ak-drift 18s ease-in-out infinite; }
+.ak-marquee      { animation: ak-marquee 38s linear infinite; }
+
+.ak-delay-1 { animation-delay: 0.08s; }
+.ak-delay-2 { animation-delay: 0.18s; }
+.ak-delay-3 { animation-delay: 0.30s; }
+.ak-delay-4 { animation-delay: 0.44s; }
+.ak-delay-5 { animation-delay: 0.60s; }
+
+/* Brand gradient text with animated hue */
+.ak-brand-gradient-text {
+  background: linear-gradient(90deg, #9D4CDD, #3B82F6, #F97316, #EC4899, #9D4CDD);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: ak-gradient-shift 8s ease-in-out infinite;
+}
+
+/* Shimmer overlay on cards (optional) */
+.ak-shimmer::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,0.45) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: ak-shimmer 3.5s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.ak-shimmer:hover::before { opacity: 1; }
+
+/* Card hover lift */
+.ak-card-lift {
+  transition: transform 0.45s cubic-bezier(.2,.7,.2,1), box-shadow 0.45s ease, border-color 0.3s ease;
+}
+.ak-card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -20px rgba(24,24,27,0.22);
+}
+
+/* Image ken-burns on parent hover */
+.ak-img-zoom {
+  transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+.group:hover .ak-img-zoom { transform: scale(1.08); }
+
+/* Blinking caret for typewriter-feel */
+.ak-caret::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  background: currentColor;
+  margin-left: 6px;
+  vertical-align: baseline;
+  animation: ak-caret-blink 1.05s steps(1,end) infinite;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .ak-fade-up, .ak-fade-in, .ak-scale-in,
+  .ak-float, .ak-float-slow, .ak-drift, .ak-marquee,
+  .ak-brand-gradient-text, .ak-shimmer::before, .ak-caret::after {
+    animation: none !important;
+  }
+  .ak-fade-up, .ak-fade-in, .ak-scale-in { opacity: 1 !important; }
+}
